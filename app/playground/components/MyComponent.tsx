@@ -28,8 +28,6 @@ const MyComponent = () => {
     setCounter((prevCounter) => prevCounter - 1);
   };
 
-
-
   return (
     <div className="">
       <div className="flex gap-5">
@@ -54,17 +52,19 @@ const MyComponent = () => {
       <hr className="my-6" />
       <div className="border rounded-full mx-auto w-max flex gap-2 items-center p-1 ">
         <div
-          onClick={() => increase()}
-          className="px-2 select-none text-xl cursor-pointer hover:bg-slate-950 rounded-full transition hover:text-slate-50 w-10 flex items-center justify-center h-10"
-        >
-          +
-        </div>
-        <div className="select-none px-4 w-20 text-center border-x">{counter}</div>
-        <div
           onClick={() => decrease()}
           className="select-none px-2 text-xl cursor-pointer hover:bg-slate-950 rounded-full transition hover:text-slate-50 w-10 flex items-center justify-center h-10"
         >
           -
+        </div>
+        <div className="select-none px-4 w-20 text-center border-x">
+          {counter}
+        </div>
+        <div
+          onClick={() => increase()}
+          className="px-2 select-none text-xl cursor-pointer hover:bg-slate-950 rounded-full transition hover:text-slate-50 w-10 flex items-center justify-center h-10"
+        >
+          +
         </div>
       </div>
     </div>

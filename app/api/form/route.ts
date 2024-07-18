@@ -21,3 +21,9 @@ export async function POST(req: Request) {
 
   return NextResponse.json(form);
 }
+
+export async function GET(req: Request) {
+  const users = await prisma.form.findMany();
+
+  return Response.json(users);
+}
